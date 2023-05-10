@@ -1,11 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import BasicButton from "../components/buttons/BasicButton";
-import { useState } from "react";
-import Modal from "../components/modals/Modal";
+import CenteredModal from "../components/modals/CenteredModal";
 
 const Home: NextPage = () => {
-  const [openModal, setOpenModal] = useState(false);
   return (
     <div>
       <Head>
@@ -14,8 +11,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <BasicButton onClick={() => setOpenModal(true)}>Test</BasicButton>
-      {openModal && <Modal closeHandler={setOpenModal}>{"Test"}</Modal>}
+      <CenteredModal />
     </div>
   );
 };
